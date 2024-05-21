@@ -1,6 +1,6 @@
 <div>
-    <div class="bg-dark d-flex flex-column justify-content-center align-items-center ms-auto">
-        <nav class="navbar navbar-expand-lg text-center border-bottom border-danger">
+    <div class="bg-dark d-flex flex-column justify-content-center align-items-center ">
+        <nav class="navbar navbar-expand-lg text-center border-bottom border-danger mx-auto py-2 ">
             <div class="container-fluid mx-auto">
                 {{-- <a class="navbar-brand text-white" href="#">Navbar</a> --}}
                 <img class="navbar-brand" src="/image/image 1.png" alt="" srcset="" style="max-width: 25px">
@@ -8,8 +8,8 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto ml-2">
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav px-2">
                         <li class="nav-item">
                             <a class="nav-link active text-white" aria-current="page" href="/">Beranda</a>
                         </li>
@@ -29,7 +29,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                   <li><a class="dropdown-item" href="/layanan-surat">Persetujuan Surat</a></li>
-                                  <li><a class="dropdown-item" href="#">Pengaduan</a></li>
+                                  <li><a class="dropdown-item" href="/pengaduan">Pengaduan</a></li>
                                  
                                 </ul>
                               </div>

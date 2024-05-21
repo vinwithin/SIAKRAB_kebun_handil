@@ -1,11 +1,11 @@
 @extends('components/layouts/app')
 @section('content')
-    <div class="container-fluid bg-dark d-flex flex-column justify-content-between vh-100 p-0 absolute ">
+    <div class="container-fluid bg-dark d-flex flex-column justify-content-between vh-100 p-0 mb-2">
         <div class="container d-flex w-75 h-75 justify-content-start align-items-center text-white ml-3">
             <h1 class="fw-bold">Kelurahan Kebun Handil <br> Kecamatan Jelutung <br> Kota Jambi</h1>
         </div>
-        <div class="w-100 mt-2">
-            <img class="image-fluid w-96" src="/image/Asset1.png" alt="">
+        <div class="container-fluid bg-dark p-0 w-100">
+            <img class="image-fluid p-0  " src="/image/Asset1.png" alt="" style="width: 100%; height: 100%">
         </div>
     </div>
 

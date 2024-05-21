@@ -1,7 +1,7 @@
 
 @extends('components/layouts/app')
 @section('content')
-<div class="container mt-2 p-4 w-75 ">
+<div class="container mt-2 p-4 w-75 mb-4">
     <h1 class="border-bottom border-warning p-2">Berita</h1>
     <div class="card mb-3" >
         <div class="row g-0">
@@ -31,7 +31,7 @@
           </div>
         </div>
       </div>
-</div>
 
+</div>
 
 @endsection
