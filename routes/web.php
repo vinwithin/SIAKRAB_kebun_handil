@@ -2,6 +2,7 @@
 
 use App\Livewire\Beranda;
 use App\Livewire\Berita;
+use App\Livewire\Dashboard;
 use App\Livewire\FormSurat;
 use App\Livewire\LayananSurat;
 use App\Livewire\Pengaduan;
@@ -20,3 +21,4 @@ Route::get('/layanan-surat', LayananSurat::class);
 Route::get('/syarat-surat', SyaratSurat::class);
 Route::get('/surat', FormSurat::class);
 Route::get('/pengaduan', Pengaduan::class);
+Route::get('/admin', Dashboard::class);

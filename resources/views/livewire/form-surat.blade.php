@@ -8,11 +8,11 @@
         <form class="row g-2 p-2">
             <div class="col-md-6 p-2">
               <label for="validationDefault01" class="form-label">Nama Lengkap</label>
-              <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+              <input type="text" class="form-control" id="validationDefault01"  required>
             </div>
             <div class="col-md-6 p-2">
               <label for="validationDefault02" class="form-label">NIK</label>
-              <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+              <input type="text" class="form-control" id="validationDefault02" required>
             </div>
             <div class="col-md-6 p-2">
               <label for="validationDefaultUsername" class="form-label">No. Wa</label>            
@@ -30,7 +30,7 @@
                   </div>
             </div>
             <div class="col-md-6 p-2">
-                <p>Akta Kelahiran</p>
+                <p>Bukti Lunas PBB Tahun Berjalan</p>
                 <div class="input-group mb-3">
                     <input type="file" class="form-control" id="inputGroupFile02">
                     <label class="input-group-text" for="inputGroupFile02">Upload</label>
@@ -52,9 +52,9 @@
             </div>
             
             
-            <div class="col-12 d-flex">
+            <div class="col-12 ">
+              <p class=" ">*Mohon periksa kembali data anda</p>
               <button class="btn btn-primary" type="submit">Submit form</button>
-              <p class="text-center ">*Mohon periksa kembali data anda</p>
             </div>
           </form>
     </div>

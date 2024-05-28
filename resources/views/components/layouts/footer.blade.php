@@ -24,8 +24,8 @@
                 <h5>Contact Us</h5>
                 <ul class="list-unstyled">
                     <li><span class="font-weight-bold">Address:</span> 123 Street Name, City, State, ZIP</li>
-                    <li><span class="font-weight-bold">Phone:</span> (123) 456-7890</li>
-                    <li><span class="font-weight-bold">Email:</span> info@example.com</li>
+                    <li><span class="font-weight-bold">WhatsApp:</span> 0895 2756 8820</li>
+                    <li><span class="font-weight-bold">Email:</span> handilvillage@gmail.com</li>
                 </ul>
             </div>
         </div>
