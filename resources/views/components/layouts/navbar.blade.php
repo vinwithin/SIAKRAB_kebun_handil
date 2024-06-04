@@ -28,7 +28,7 @@
                                   Layanan
                                 </a>
                                 <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="/surat">Persetujuan Surat</a></li>
+                                  <li><a class="dropdown-item" href="/surat">Pengajuan Surat</a></li>
                                   <li><a class="dropdown-item" href="/pengaduan">Pengaduan</a></li>
                                  
                                 </ul>

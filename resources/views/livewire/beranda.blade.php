@@ -20,7 +20,7 @@
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
-                    <div class="card">
+                    <div class="card shadow p-3">
                         <img src="/image/blog.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
+                    <div class="card shadow p-3">
                         <img src="/image/blog.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -40,17 +40,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <img src="/image/blog.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
+                    <div class="card shadow p-3">
                         <img src="/image/blog.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -60,7 +50,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
+                    <div class="card shadow p-3">
                         <img src="/image/blog.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -70,7 +60,17 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
+                    <div class="card shadow p-3">
+                        <img src="/image/blog.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow p-3">
                         <img src="/image/blog.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -85,7 +85,7 @@
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
-                    <div class="card">
+                    <div class="card shadow p-3">
                         <img src="/image/blog.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
+                    <div class="card shadow p-3">
                         <img src="/image/blog.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -105,12 +105,12 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
+                    <div class="card shadow p-3">
                         <img src="/image/blog.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content.</p>
+                                to additional content. This content is a little bit longer.</p>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
-                    <div class="card">
+                    <div class="card shadow p-3">
                         <img src="/image/blog.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
+                    <div class="card shadow p-3">
                         <img src="/image/blog.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
@@ -140,26 +140,30 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
+                    <div class="card shadow p-3">
                         <img src="/image/blog.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content.</p>
+                                to additional content. This content is a little bit longer.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-        </div>
-            <div class="col text-center p-4">
-                <div class="card ">
-                    
-                    <div class="card-body">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.2187150189375!2d103.61708177465717!3d-1.6224898983624103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2588a46541bc6b%3A0x81e40c13bb6159b!2skantor%20Kelurahan%20Kebun%20Handil!5e0!3m2!1sid!2sid!4v1716393878414!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="mt-5">
+                <h1 class="border-bottom border-danger">Lokasi</h1>
+            </div>
+                <div class="col text-center p-4">
+                    <div class="card ">
+                        
+                        <div class="card-body">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.2187150189375!2d103.61708177465717!3d-1.6224898983624103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2588a46541bc6b%3A0x81e40c13bb6159b!2skantor%20Kelurahan%20Kebun%20Handil!5e0!3m2!1sid!2sid!4v1716393878414!5m2!1sid!2sid" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
                 </div>
-            </div>
+        </div>
+       
     </div>
    
 @endsection

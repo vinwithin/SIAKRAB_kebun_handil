@@ -1,7 +1,7 @@
 @extends('components/layouts/app')
 @section('content')
     <div class="container mt-2 p-4 text-center w-75 ">
-        <h1 class="border-bottom border-warning p-2">Formulir Persetujuan Surat</h1>
+        <h1 class="border-bottom border-warning p-2">Formulir Pengajuan Surat</h1>
     </div>
     <div class="container mt-auto p-4 w-75 shadow-lg p-3 mb-5 rounded" style="background-color: #D8D8D8">
         <h3 class="p-2">Identitas Pemohon</h3>
@@ -21,6 +21,16 @@
             <div class="col-md-6 p-2">
               <label for="validationDefault03" class="form-label">Alamat</label>
               <input type="text" class="form-control" id="validationDefault03" required>
+            </div>
+            <div class="col-md-6 p-2">
+
+              <p>Kategori Surat</p>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">SKTM</option>
+                <option value="2">Surat Domisili</option>
+                <option value="3">Surat Izin Keramaian</option>
+              </select>
             </div>
             <div class="col-md-6 p-2">
                 <p>KTP</p>

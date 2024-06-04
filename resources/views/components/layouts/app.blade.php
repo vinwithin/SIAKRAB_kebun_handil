@@ -41,7 +41,6 @@
         </style>
     </head>
     <body style="background-color: #F8F9FA">
-        {{-- {{$slot}} --}}
         <div>
             @include('components/layouts/navbar')
         
