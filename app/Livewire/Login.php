@@ -21,7 +21,6 @@ class Login extends Component
     
     public function save(Request $request){
 
-
         $validateData = $this->validate([
             'email' => 'required|email:dns',
             'password' => 'required|min:8|max:32',

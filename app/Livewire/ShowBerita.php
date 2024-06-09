@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Berita;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
@@ -11,6 +12,8 @@ class ShowBerita extends Component
 
     public function render()
     {
-        return view('livewire.admin.show-berita');
+        return view('livewire.admin.berita.show-berita', [
+            'berita' => Berita::paginate(10),
+        ]);
     }
 }

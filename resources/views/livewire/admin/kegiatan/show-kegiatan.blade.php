@@ -1,5 +1,4 @@
-@extends('components/layouts/admin/index')
-@section('page')
+<div>
     @if (session()->has('success'))
         <div class="alert alert-success" role="alert">
             {{ session('success') }}
@@ -11,12 +10,12 @@
         </div>
     @endif
     <div class="d-flex justify-content-between mb-3">
-        <h1 class=" text-dark fs-3">Berita</h1>
+        <h1 class=" text-dark fs-3">Kegiatan</h1>
     </div>
     <div class="card p-3 shadow">
         <div class="table-responsive col-lg-12">
-            <a href="/berita/buat" class="btn btn-primary mb-3">Buat Berita</a>
-
+            <a href="/admin/kegiatan/tambah-kegiatan" class="btn btn-primary mb-3">Buat Kegiatan</a>
+            @if (count($kegiatan) > 0)
             <form action="/berita" method="get" class="form-inline mr-auto w-100 navbar-search justify-content-end mb-3">
                 <div class="input-group">
                     <input type="text" class="form-control bg-light border-0 small" placeholder="Cari..."
@@ -40,17 +39,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                   
+                    @foreach ($kegiatan as $item)
+                        
+                    
                         <tr>
-                            <th></th>
-                            <td></td>
-                            <td></td>
+                            <th>{{$loop->iteration}}</th>
+                            <td>{{$item->title}}</td>
+                            <td>{{$item->excerpt}}</td>
                             <td>
-                                <a href="berita/detail/" class="badge bg-info"><i class="fa-regular fa-eye"></i></a>
-                                <a href="berita/sunting/" class="badge bg-warning"><i class="fa-regular fa-pen-to-square"></i></a>
-                                <a href="" class="badge bg-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></a>
+                                <a href="/admin/kegiatan/detail/{{$item->slug}}" class="badge bg-info"><i class="fa-regular fa-eye"></i></a>
+                                <a href="/admin/kegiatan/edit-kegiatan/{{$item->slug}}" class="badge bg-warning"><i class="fa-regular fa-pen-to-square"></i></a>
+                                <a href="" class="badge bg-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{$item->slug}}"><i class="fa-solid fa-trash-can"></i></a>
                                 {{-- Modal hapus --}}
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="exampleModal{{$item->slug}}" tabindex="-1" aria-labelledby="exampleModalLabel{{$item->slug}}" aria-hidden="true">
                                     <div class="modal-dialog">
                                       <div class="modal-content">
                                         <div class="modal-header">
@@ -62,14 +63,14 @@
                                         </div>
                                         <div class="modal-footer">
                                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                                          <a href="/berita/hapus/" class="btn btn-primary">Iya</a>
+                                          <a href="/admin/kegiatan/delete/{{$item->slug}}" class="btn btn-primary">Iya</a>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
                             </td>
                         </tr>
-                   
+                        @endforeach
                 </tbody>
                
             </table>
@@ -77,16 +78,13 @@
                 {{ $berita->links() }}
             </div>
             @else  --}}
-                
-            <div class="alert alert-light" role="alert">
+            @else
+            <div class="alert alert-light text-center" role="alert">
                 Tidak ada data!
               </div>
-                
+            @endif
+            {{ $kegiatan->links() }}
             
         </div>
-       
-    </div>
-    {{-- modal --}}
-   
-     
-@endsection
+    </div>   
+ 

@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Kegiatan;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
@@ -11,6 +12,8 @@ class ShowKegiatan extends Component
 
     public function render()
     {
-        return view('livewire.admin.show-kegiatan');
+        return view('livewire.admin.kegiatan.show-kegiatan',[
+            'kegiatan' => Kegiatan::paginate(10),
+        ]);
     }
 }

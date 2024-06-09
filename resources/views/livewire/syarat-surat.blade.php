@@ -1,6 +1,5 @@
 
-@extends('components/layouts/app')
-@section('content')
+<div>
 <div class="container mt-2 p-4  w-75">
     <h1 class="border-bottom border-warning p-2">Persyaratan</h1>
     <div class="card mb-3 mt-4" >
@@ -62,4 +61,4 @@
     </div>
 </div>
 
-@endsection
+</div>

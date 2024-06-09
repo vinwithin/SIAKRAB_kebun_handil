@@ -1,5 +1,4 @@
-@extends('components/layouts/admin/index')
-@section('page')
+
     <div class="page-content">
         <section class="row">
             <div class="col-12 ">
@@ -90,4 +89,4 @@
             
         </section>
     </div>
-@endsection
+

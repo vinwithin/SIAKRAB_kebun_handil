@@ -1,6 +1,4 @@
-
-@extends('components/layouts/app')
-@section('content')
+<div>
 <div class="container mt-2 p-4 text-center w-75 ">
     <h1 class="border-bottom border-warning p-2">Pengajuan Surat</h1>
 </div>
@@ -116,4 +114,4 @@
         </div>
       </div>
 </div>
-@endsection
+</div>

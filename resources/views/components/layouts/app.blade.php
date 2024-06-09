@@ -45,7 +45,7 @@
             @include('components/layouts/navbar')
         
         
-            @yield('content')
+            {{$slot}}
             @include('components/layouts/footer')
 
         </div>

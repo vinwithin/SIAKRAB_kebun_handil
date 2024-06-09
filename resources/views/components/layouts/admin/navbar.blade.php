@@ -12,7 +12,7 @@
         </div>
         <div class="ms-3 name">
             <h5 class="font-bold">{{ auth()->user()->name }}</h5>
-            <h6 class="text-muted mb-0">@johnducky</h6>
+            <h6 class="text-muted mb-0">{{ auth()->user()->email }}</h6>
         </div>
     </div>
 </div>

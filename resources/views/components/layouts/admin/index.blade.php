@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,13 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/app-dark.css">
     <link rel="stylesheet" href="/css/iconly.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.8/dist/trix.umd.min.js"></script>
+    <style>
+        trix-toolbar [data-trix-button-group="file-tools"]{
+           display:none;
+       }
+   </style>
     @livewireStyles
 </head>
 
@@ -73,9 +80,12 @@
         <div id="main">
             @include('components/layouts/admin/navbar')
 
-            @yield('page')
+            
+            {{ $slot }}
 
             @include('components/layouts/admin/footer')
+
+            
 
         </div>
     </div>
@@ -90,6 +100,7 @@
     <!-- Need: Apexcharts -->
     <script src="/js/apexcharts.min.js"></script>
     <script src="/js/dashboard.js"></script>
+    <script src="https://kit.fontawesome.com/f10456a175.js" crossorigin="anonymous"></script>
     @livewireScripts
 
 </body>

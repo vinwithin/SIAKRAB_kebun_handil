@@ -1,5 +1,4 @@
-@extends('components/layouts/app')
-@section('content')
+<div>
     <div class="container-fluid bg-dark d-flex flex-column justify-content-between vh-100 p-0 mb-2">
         <div class="container d-flex w-75 h-75 justify-content-start align-items-center text-white ml-3">
             <h1 class="fw-bold">Kelurahan Kebun Handil <br> Kecamatan Jelutung <br> Kota Jambi</h1>
@@ -13,72 +12,25 @@
     <div class="">
         <div class="container w-75">
             <div class="mt-5">
-                <h1 class="fw-bold">Blog</h1>
+                <h1 class="fw-bold">Berita</h1>
             </div>
             <div>
                 <p class="border-bottom border-danger">Informasi atau Berita Terkini</p>
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4">
+                @foreach ($berita as $item)
                 <div class="col">
                     <div class="card shadow p-3">
-                        <img src="/image/blog.png" class="card-img-top" alt="...">
+                        <img src="/storage/{{$item->image_berita}}" class="card-img-top" alt="..." style="max-width: 350px; height:250px; ">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title">{{$item->title}}</h5>
+                            <p class="card-text">{{$item->excerpt}}</p>
+                            <a href="/berita/detail/{{$item->slug}}" class="btn btn-primary">Check</a>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card shadow p-3">
-                        <img src="/image/blog.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow p-3">
-                        <img src="/image/blog.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow p-3">
-                        <img src="/image/blog.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow p-3">
-                        <img src="/image/blog.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow p-3">
-                        <img src="/image/blog.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
+               @endforeach
+               {{$berita->links()}}
             </div>
             <div class="mt-5">
                 <h1 class="border-bottom border-danger fw-bold">Fasilitas Umum</h1>
@@ -119,36 +71,20 @@
                 <h1 class="border-bottom border-danger">Kegiatan dan Acara</h1>
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4">
+                @foreach ($kegiatan as $item)
                 <div class="col">
                     <div class="card shadow p-3">
-                        <img src="/image/blog.png" class="card-img-top" alt="...">
+                        <img src="/storage/kegiatan/{{$item->image_kegiatan}}" class="card-img-top" alt="..." style="max-width: 350px; height:250px; ">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title">{{$item->title}}</h5>
+                            <p class="card-text">{{$item->excerpt}}</p>
+                            <a href="/kegiatan/detail/{{$item->slug}}" class="btn btn-primary">Check</a>
+
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card shadow p-3">
-                        <img src="/image/blog.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card shadow p-3">
-                        <img src="/image/blog.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+               {{$berita->links()}}
             </div>
 
             <div class="mt-5">
@@ -166,4 +102,4 @@
        
     </div>
    
-@endsection
+</div>

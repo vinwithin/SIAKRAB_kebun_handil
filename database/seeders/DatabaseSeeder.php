@@ -26,5 +26,16 @@ class DatabaseSeeder extends Seeder
                 'role' => 'admin'
             ],
         ]);
+        DB::table('kategori_surat')->insert([
+            [            
+                'name' => 'SKTM',
+            ],
+            [
+                'name' => 'Surat Domisili',
+            ],
+            [
+                'name' => 'Surat Izin Keramaian',
+            ]
+        ]);
     }
 }
