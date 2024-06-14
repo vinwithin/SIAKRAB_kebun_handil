@@ -24,6 +24,7 @@ use App\Livewire\SuratDiterima;
 use App\Livewire\SuratDitolak;
 use App\Livewire\SyaratSurat;
 use App\Livewire\VisiMisi;
+use App\Models\AjuanSurat as ModelsAjuanSurat;
 use Illuminate\Support\Facades\Route;
 
 
@@ -49,6 +50,7 @@ Route::middleware('auth')->prefix('admin')->group(function(){
     Route::get('/surat/ditolak', SuratDitolak::class);
     
     Route::get('/aduan/delete/{id}', [Aduan::class, 'destroy']);
+    Route::get('/surat/delete/{id}', [SuratDiterima::class, 'destroy']);
     Route::get('/berita/tambah-berita', AddBerita::class);
     Route::post('/berita/tambah-berita', AddBerita::class);
     Route::get('/berita/edit-berita/{berita:slug}', EditBerita::class);

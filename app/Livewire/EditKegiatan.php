@@ -57,6 +57,6 @@ class EditKegiatan extends Component
     }
     public function destroy(Kegiatan $kegiatan){
         Kegiatan::where('id', $kegiatan->id)->delete(); 
-        return redirect('/admin/kegiatan')->with('success', 'Berita Berhasil Dihapus!');
+        return redirect('/admin/kegiatan')->with('success', 'Kegiatan Berhasil Dihapus!');
     }
 }

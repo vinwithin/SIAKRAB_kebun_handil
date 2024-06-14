@@ -1,13 +1,18 @@
 <div id="auth">
-
+   
     <div class="row h-100">
+        @if (session()->has('loginFailed'))
+        <div class="alert alert-danger" role="alert">
+            {{ session('loginFailed') }}
+        </div>
+    @endif
         <div class="col-lg-5 col-12">
             <div id="auth-left">
                 <div class="auth-logo">
                     <a href="index.html" class="fs-2">SIAKRAB</a>
                 </div>
                 <h1 class="auth-title">Log in.</h1>
-                <p class="auth-subtitle mb-5">Log in with your data that you entered during registration.</p>
+                <p class="auth-subtitle mb-5">Log in ke sistem SIAKRAB.</p>
 
                 <form  wire:submit='save'>
                     <div class="form-group position-relative has-icon-left mb-4">

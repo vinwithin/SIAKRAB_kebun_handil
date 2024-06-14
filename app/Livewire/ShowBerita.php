@@ -9,11 +9,17 @@ use Livewire\Component;
 class ShowBerita extends Component
 {
     #[Layout('components.layouts.admin.index')] 
+    public $cari;
 
     public function render()
     {
         return view('livewire.admin.berita.show-berita', [
-            'berita' => Berita::paginate(10),
+            'berita' => $this->cari === null ?
+                    Berita::paginate(10) :
+                    Berita::where('name', 'like', '%' . $this->cari . '%')->latest()->paginate(10),
+            
         ]);
     }
+    
+    
 }

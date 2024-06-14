@@ -10,7 +10,7 @@
         </div>
     @endif
     <div class="d-flex justify-content-between mb-3">
-        <h1 class=" text-dark fs-3">Daftar Surat</h1>
+        <h1 class=" text-dark fs-3">Daftar Surat Diterima</h1>
     </div>
 
     <div class="card p-3 shadow">
@@ -37,6 +37,11 @@
                             <th scope="col">Kategori Surat</th>
                             <th scope="col">NIK</th>
                             <th scope="col">NoWa</th>
+                            <th scope="col">TTL</th>
+                            <th scope="col">Jenis Kelamin</th>
+                            <th scope="col">Pekerjaan</th>
+                            <th scope="col">Agama</th>
+                            <th scope="col">Alamat</th>
                             <th scope="col">KTP</th>
                             <th scope="col">PBB</th>
                             <th scope="col">KK</th>
@@ -53,6 +58,11 @@
                                 <td>{{ $item->kategori_surat->name }}</td>
                                 <td>{{ $item->NIK }}</td>
                                 <td>{{ $item->NoWa }}</td>
+                                <td>{{ $item->ttl }}</td>
+                                <td>{{ $item->jenis_kelamin }}</td>
+                                <td>{{ $item->pekerjaan }}</td>
+                                <td>{{ $item->agama }}</td>
+                                <td>{{ $item->Alamat }}</td>
                                 <td>
                                     <img src="/storage/surat/ktp/{{ $item->KTP }}" alt=""
                                         class="img-thumbnail" style="max-width: 40px; cursor: pointer;"
@@ -79,19 +89,23 @@
                                 </td>
                                 <td class="fw-bold">{{ $item->status }}</td>
                                 <td>
-                                   
+
                                     <a href="#" class="badge bg-warning" data-bs-toggle="modal"
-                                        data-bs-target="#circleXModal" >
+                                        data-bs-target="#circleXModal">
                                         <i class="fa-solid fa-circle-xmark"></i>
                                     </a>
-                                    <a href="#" class="badge bg-warning" data-bs-toggle="modal"
-                                        data-bs-target="#thumbsUpModal" >
-                                        <i class="fa-solid fa-thumbs-up"></i>
-                                    </a>
-                                    @if($item->status == 'Diterima')
-                                    <a href="#" class="badge bg-warning" wire:click='sktm({{ $item->id }})'>
-                                        <i class="fa-solid fa-download"></i>
-                                    </a>
+                                   
+                                    @if ($item->status == 'Diterima' && $item->kategori_surat_id == 1)
+                                        <a href="#" class="badge bg-warning"
+                                            wire:click='sktm({{ $item->id }})'>
+                                            <i class="fa-solid fa-download"></i>
+                                        </a>
+                                    @endif
+                                    @if ($item->kategori_surat_id == 2)
+                                        <a href="#" class="badge bg-warning"
+                                            wire:click='domisili({{ $item->id }})'>
+                                            <i class="fa-solid fa-download"></i>
+                                        </a>
                                     @endif
                                     <a href="" class="badge bg-danger" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></a>
@@ -111,13 +125,37 @@
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
                                                         data-bs-dismiss="modal">Tidak</button>
-                                                    <a href="/admin/berita/delete/" class="btn btn-primary">Iya</a>
+                                                    <a href="/admin/surat/delete/{{$item->id}}" class="btn btn-primary">Iya</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
+                            <div class="modal fade" id="circleXModal" tabindex="-1"
+                                aria-labelledby="circleXModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="circleXModalLabel">Konfirmasi Aksi</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Apakah Anda yakin ingin menolak ajuan surat ini?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Tidak</button>
+                                            <button type="button" class="btn btn-primary"
+                                                wire:click="reject({{ $item->id }})">Iya</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Modal for Thumbs Up -->
+                            
                         @endforeach
                     </tbody>
                 </table>
@@ -143,44 +181,7 @@
     </div>
 
     <!-- Modal for Circle X Mark -->
-    <div class="modal fade" id="circleXModal" tabindex="-1" aria-labelledby="circleXModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="circleXModalLabel">Konfirmasi Aksi</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Apakah Anda yakin ingin menolak ajuan surat ini?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                    <button type="button" class="btn btn-primary" wire:click="reject({{ $item->id }})">Iya</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Modal for Thumbs Up -->
-    <div class="modal fade" id="thumbsUpModal" tabindex="-1" aria-labelledby="thumbsUpModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="thumbsUpModalLabel">Konfirmasi Aksi</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Apakah Anda yakin ingin menerima ajuan surat ini?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                    <button type="button" class="btn btn-primary" wire:click="approve({{$item->id}})">Iya</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <script>
         function showImageModal(imageUrl) {
             document.getElementById('modalImage').src = imageUrl;

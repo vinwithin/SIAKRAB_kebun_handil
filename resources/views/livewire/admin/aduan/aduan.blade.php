@@ -36,6 +36,7 @@
                         <th scope="col">Nama</th>
                         <th scope="col">Nomor Wa</th>
                         <th scope="col">Lokasi</th>
+                        <th scope="col">Detail</th>
                         <th scope="col">Foto Bukti</th>
                         <th scope="col">Action</th>
                     </tr>
@@ -47,6 +48,7 @@
                         <th>{{ $item->nama_pelapor }}</th>
                         <td><a href="https://wa.me/{{ $item->NoWa }}">https://wa.me/{{ $item->NoWa }}</a></td>
                         <td>{{ $item->Lokasi }}</td>
+                        <td>{{ $item->detail }}</td>
                         <td>
                             <img src="/storage/aduan/{{ $item->foto_bukti }}" alt="" class="img-thumbnail" style="max-width: 80px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#imageModal" data-bs-image="/storage/aduan/{{ $item->foto_bukti }}">
                         </td>

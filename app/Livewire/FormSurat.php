@@ -13,6 +13,10 @@ class FormSurat extends Component
     public $nama_pengaju;
     public $NIK;
     public $NoWa;
+    public $ttl;
+    public $jenis_kelamin;
+    public $agama;
+    public $pekerjaan;
     public $Alamat;
     public $kategori_surat_id;
     public $KTP;
@@ -32,6 +36,10 @@ class FormSurat extends Component
                 'nama_pengaju' => 'required',
                 'NIK' => 'required',
                 'NoWa' => 'required',
+                'ttl' => 'required',
+                'jenis_kelamin' => 'required',
+                'agama' => 'required',
+                'pekerjaan' => 'required',
                 'Alamat' => 'required',
                 'kategori_surat_id' => '',
                 'KTP' => 'required|image|mimes:png,jpg,jpeg|max:2024',

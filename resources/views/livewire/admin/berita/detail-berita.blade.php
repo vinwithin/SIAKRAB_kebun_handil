@@ -6,6 +6,6 @@
     
 </div>
 <div>
-    <a href="/artikel" class="btn btn-warning mt-2">Back</a>
+    <a href="/admin/berita" class="btn btn-warning mt-2">Back</a>
 </div>
 </div>

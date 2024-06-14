@@ -1,10 +1,20 @@
 <div>
+    @if (session()->has('success'))
+        <div class="alert alert-success" role="alert">
+            {{ session('success') }}
+        </div>
+    @endif
+    @if (session()->has('error'))
+        <div class="alert alert-danger" role="alert">
+            {{ session('error') }}
+        </div>
+    @endif
   <div class="container mt-2 p-4 text-center w-75">
       <h1 class="border-bottom border-warning p-2">Formulir Pengajuan Surat</h1>
   </div>
   <div class="container mt-auto p-4 w-75 shadow-lg p-3 mb-5 rounded" style="background-color: #D8D8D8">
       <h3 class="p-2">Identitas Pemohon</h3>
-      <form wire:submit.prevent='save' class="row g-2 p-2">
+      <form wire:submit='save' class="row g-2 p-2">
           <div class="col-md-6 p-2">
               <label for="nama_pengaju" class="form-label">Nama Lengkap</label>
               <input type="text" class="form-control" id="nama_pengaju" wire:model='nama_pengaju' required>
@@ -16,6 +26,26 @@
           <div class="col-md-6 p-2">
               <label for="NoWa" class="form-label">No. Wa</label>
               <input type="text" class="form-control" id="NoWa" wire:model='NoWa' required>
+          </div>
+          <div class="col-md-6 p-2">
+              <label for="ttl" class="form-label">Tempat Tanggal Lahir</label>
+              <input type="text" class="form-control" id="ttl" wire:model='ttl' required>
+          </div>
+          <div class="col-md-6 p-2">
+            <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+            <select class="form-select" id="jenis_kelamin" wire:model='jenis_kelamin' required>
+                <option value="" selected="selected" hidden="hidden">Pilih Kategori</option>
+                <option value="Laki-laki">Laki-Laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+          </div>
+          <div class="col-md-6 p-2">
+              <label for="agama" class="form-label">Agama</label>
+              <input type="text" class="form-control" id="agama" wire:model='agama' required>
+          </div>
+          <div class="col-md-6 p-2">
+              <label for="pekerjaan class="form-label">Pekerjaan</label>
+              <input type="text" class="form-control" id="pekerjaan" wire:model='pekerjaan' required>
           </div>
           <div class="col-md-6 p-2">
               <label for="Alamat" class="form-label">Alamat</label>

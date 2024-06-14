@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string('nama_pengaju');
             $table->string('NIK');
             $table->string('NoWa');
+            $table->string('ttl');
+            $table->string('jenis_kelamin');
+            $table->string('agama');
+            $table->string('pekerjaan');
             $table->text('Alamat');
             $table->foreignId('kategori_surat_id');
             $table->text('KTP');

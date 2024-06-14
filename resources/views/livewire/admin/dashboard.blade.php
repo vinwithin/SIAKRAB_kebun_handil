@@ -14,7 +14,7 @@
                                     </div>
                                     <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                         <h6 class="text-muted font-semibold">Berita</h6>
-                                        <h6 class="font-extrabold mb-0">112.000</h6>
+                                        <h6 class="font-extrabold mb-0">{{count($berita)}}</h6>
                                     </div>
                                 </div>
                             </div>
@@ -31,7 +31,7 @@
                                     </div>
                                     <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                         <h6 class="text-muted font-semibold">Kegiatan</h6>
-                                        <h6 class="font-extrabold mb-0">183.000</h6>
+                                        <h6 class="font-extrabold mb-0">{{count($kegiatan)}}</h6>
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                         <h6 class="text-muted font-semibold">Surat Masuk</h6>
-                                        <h6 class="font-extrabold mb-0">80.000</h6>
+                                        <h6 class="font-extrabold mb-0">{{count($ajuan_surat)}}</h6>
                                     </div>
                                 </div>
                             </div>
@@ -64,8 +64,8 @@
                                         </div>
                                     </div>
                                     <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                        <h6 class="text-muted font-semibold">Aduan Masuk</h6>
-                                        <h6 class="font-extrabold mb-0">112</h6>
+                                        <h6 class="text-muted font-semibold">Aduan</h6>
+                                        <h6 class="font-extrabold mb-0">{{count($aduan)}}</h6>
                                     </div>
                                 </div>
                             </div>

@@ -17,18 +17,19 @@
             <div class="table-responsive col-lg-10">
                 <a href="/admin/berita/tambah-berita" class="btn btn-primary mb-3">Buat Berita</a>
                 @if (count($berita) > 0)
-                <form action="/berita" method="get"
-                    class="form-inline mr-auto w-100 navbar-search justify-content-end mb-3">
+                
                     <div class="input-group">
                         <input type="text" class="form-control bg-light border-0 small" placeholder="Cari..."
-                            name="cari">
+                            name="cari" wire:model="cari">
                         <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">
+                            <button type="submit" class="btn btn-primary" >
                                 <i class="fas fa-search fa-sm"></i>
                             </button>
                         </div>
+                
                     </div>
-                </form>
+                
+                
 
 
                 <table class="table table-striped table-hover">
@@ -36,7 +37,7 @@
                         <tr>
                             <th scope="col">No</th>
                             <th scope="col">Judul</th>
-                            <th scope="col">Kategori</th>
+                            <th scope="col">Deskripsi</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
