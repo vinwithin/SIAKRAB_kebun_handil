@@ -31,6 +31,6 @@ class Aduan extends Component
 
     public function destroy($id){
         ModelsAduan::where('id', $id )->delete(); 
-        return redirect('/admin/berita')->with('success', 'Aduan Berhasil Dihapus!');
+        return redirect('/admin/aduan')->with('success', 'Aduan Berhasil Dihapus!');
     }
 }

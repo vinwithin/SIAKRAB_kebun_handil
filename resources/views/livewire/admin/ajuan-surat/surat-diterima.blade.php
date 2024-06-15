@@ -120,7 +120,7 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Apakah anda yakin menghapus berita ini?
+                                                    Apakah anda yakin menghapus ajuan surat ini?
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"

@@ -34,6 +34,22 @@
                                 </ul>
                               </div>
                         </li>
+                        @if (Auth::user())       
+                        <li>
+                            <a class="nav-link text-white ml-2" href="/admin/logout">Logout</a>
+
+                        </li>
+                        <li>
+                            <a class="nav-link text-white ml-2" href="/admin/dashboard">Dashboard</a>
+
+                        </li>
+                        @else
+                        <li>
+                            <a class="nav-link text-white ml-2" href="/login">Login</a>
+
+                        </li>
+                        @endif
+
                     </ul>
                 </div>
             </div>

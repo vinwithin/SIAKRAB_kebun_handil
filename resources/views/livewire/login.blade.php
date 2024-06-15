@@ -16,14 +16,14 @@
 
                 <form  wire:submit='save'>
                     <div class="form-group position-relative has-icon-left mb-4">
-                        <input type="email" class="form-control form-control-xl" placeholder="Email" wire:model='email'>
+                        <input type="email" class="form-control form-control-xl" placeholder="Email" wire:model='email' required>
                         <div class="form-control-icon">
                             <i class="bi bi-person"></i>
                         </div>
                         <div>@error('email') {{ $message }} @enderror</div>
                     </div>
                     <div class="form-group position-relative has-icon-left mb-4">
-                        <input type="password" class="form-control form-control-xl" placeholder="Password" wire:model='password'>
+                        <input type="password" class="form-control form-control-xl" placeholder="Password" wire:model='password' required>
                         <div class="form-control-icon">
                             <i class="bi bi-shield-lock"></i>
                         </div>
@@ -37,10 +37,7 @@
                     </div>
                     <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Log in</button>
                 </form>
-                <div class="text-center mt-5 text-lg fs-4">
-
-                    <p><a class="font-bold" href="auth-forgot-password.html">Forgot password?</a>.</p>
-                </div>
+                
             </div>
         </div>
         <div class="col-lg-7 d-none d-lg-block">

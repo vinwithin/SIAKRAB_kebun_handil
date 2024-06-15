@@ -13,7 +13,7 @@
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Judul</label>
-                <input type="text" wire:model="title" class="form-control @error('title') is-invalid @enderror" id="title">
+                <input type="text" wire:model="title" class="form-control @error('title') is-invalid @enderror" id="title" required>
                 @error('title')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -26,12 +26,12 @@
                 @error('body')
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
-                <input id="id1" name="body" type="hidden" value="{{$body}}">
+                <input id="id1" name="body" type="hidden" value="{{$body}}" required>
                 <trix-editor class="trix-content" input="id1"  ></trix-editor>
             </div>
             
             <div class="input-group mb-3">
-                <input type="file"  class="form-control" id="image_berita" name="image_berita" wire:model='image_berita' accept="image/png, image/jpeg, image/jpg">
+                <input type="file"  class="form-control" id="image_berita" name="image_berita" wire:model='image_berita' accept="image/png, image/jpeg, image/jpg" required>
                 <label class="input-group-text" for="image_berita" >Upload</label>
                 @error('image_berita')
                     <div class="invalid-feedback">

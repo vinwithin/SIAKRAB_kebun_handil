@@ -12,7 +12,7 @@
             <div class="mb-3">
                 <label for="title" class="form-label">Judul</label>
                 <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" wire:model='title' name="title"
-                    >
+                required>
                 @error('title')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -24,12 +24,12 @@
                 @error('body')
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
-                <input id="id1" name="body" type="hidden" value="{{$body}}">
+                <input id="id1" name="body" type="hidden" value="{{$body}}" required>
                 <trix-editor class="trix-content" input="id1"  ></trix-editor>
             </div>
             <div class="input-group mb-3">
                 <input type="file" class="form-control @error('image_berita') is-invalid @enderror" id="image_berita"
-                    name="image_berita" wire:model='image_kegiatan' accept="image/png, image/jpeg, image/jpg">
+                    name="image_berita" wire:model='image_kegiatan' accept="image/png, image/jpeg, image/jpg" required>
                 <label class="input-group-text" for="image_berita">Upload</label>
                 @error('image_berita')
                     <div class="invalid-feedback">

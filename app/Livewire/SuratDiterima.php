@@ -28,7 +28,7 @@ class SuratDiterima extends Component
         if ($result) {
             return redirect('/admin/surat/ditolak')->with('success', 'berhasil mengubah data');
         } else {
-            return redirect('/admin/surat')->with("error", "Gagal mengubah data!");
+            return redirect('/admin/surat/diterima')->with("error", "Gagal mengubah data!");
         }
     }
 
